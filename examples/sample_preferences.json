@@ -1,0 +1,9 @@
+{
+  "gender": "Men",
+  "item_types": ["Blazer", "Pants", "Oxfords"],
+  "style_vibes": ["Formal", "Elegant"],
+  "favorite_colors": ["Blue", "Black"],
+  "preferred_materials": ["Cotton", "Wool"],
+  "key_occasions": ["Interview", "Office"],
+  "primary_seasons": ["Autumn", "Winter"]
+}

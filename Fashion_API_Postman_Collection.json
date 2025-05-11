@@ -1,0 +1,436 @@
+{
+	"info": {
+		"_postman_id": "22e8abf6-972d-4939-982a-42234f3e3214",
+		"name": "Fashion Recommendation API",
+		"description": "A collection for testing the Fashion Recommendation API endpoints",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Questions",
+			"item": [
+				{
+					"name": "Get All Questions",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/questions",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"questions"
+							]
+						},
+						"description": "Retrieves all general questionnaire questions"
+					},
+					"response": []
+				},
+				{
+					"name": "Get Specific Question (Gender)",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/questions/gender",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"questions",
+								"gender"
+							]
+						},
+						"description": "Retrieves the gender question"
+					},
+					"response": []
+				},
+				{
+					"name": "Get Specific Question (Item Types)",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/questions/item_types",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"questions",
+								"item_types"
+							]
+						},
+						"description": "Retrieves the item types question"
+					},
+					"response": []
+				}
+			],
+			"description": "Endpoints for retrieving questionnaire questions"
+		},
+		{
+			"name": "Answers",
+			"item": [
+				{
+					"name": "Submit Specific Occasion Answer",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"selection\": [\"Office\"]\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/answers/specific_occasion",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"answers",
+								"specific_occasion"
+							]
+						},
+						"description": "Submit answer for specific occasion"
+					},
+					"response": []
+				},
+				{
+					"name": "Submit Gender Answer",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"selection\": [\"Men\"]\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/answers/gender",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"answers",
+								"gender"
+							]
+						},
+						"description": "Submit answer for gender preference"
+					},
+					"response": []
+				},
+				{
+					"name": "Submit Item Types Answer",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"selection\": [\"Jacket\", \"Pants\", \"Sneakers\"]\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/answers/item_types",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"answers",
+								"item_types"
+							]
+						},
+						"description": "Submit answer for item types"
+					},
+					"response": []
+				},
+				{
+					"name": "Submit Style Vibes Answer",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"selection\": [\"Casual\", \"Preppy\"]\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/answers/style_vibes",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"answers",
+								"style_vibes"
+							]
+						},
+						"description": "Submit answer for style vibes"
+					},
+					"response": []
+				},
+				{
+					"name": "Submit Colors Answer",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"selection\": [\"Black\", \"Blue\", \"Gray\"]\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/answers/favorite_colors",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"answers",
+								"favorite_colors"
+							]
+						},
+						"description": "Submit answer for favorite colors"
+					},
+					"response": []
+				}
+			],
+			"description": "Endpoints for submitting answers to questionnaire questions"
+		},
+		{
+			"name": "Item Specific",
+			"item": [
+				{
+					"name": "Get Item-Specific Question (Jacket Colors)",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/item-specific-questions/Jacket/colors",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"item-specific-questions",
+								"Jacket",
+								"colors"
+							]
+						},
+						"description": "Get item-specific question for Jacket colors"
+					},
+					"response": []
+				},
+				{
+					"name": "Submit Item-Specific Answer (Jacket Colors)",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"selection\": [\"Black\", \"Blue\"]\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/item-specific-answers/Jacket/colors",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"item-specific-answers",
+								"Jacket",
+								"colors"
+							]
+						},
+						"description": "Submit item-specific answer for Jacket colors"
+					},
+					"response": []
+				},
+				{
+					"name": "Get Item-Specific Question (Jacket Materials)",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/item-specific-questions/Jacket/materials",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"item-specific-questions",
+								"Jacket",
+								"materials"
+							]
+						},
+						"description": "Get item-specific question for Jacket materials"
+					},
+					"response": []
+				},
+				{
+					"name": "Submit Item-Specific Answer (Jacket Materials)",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"selection\": [\"Cotton\", \"Denim\"]\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/item-specific-answers/Jacket/materials",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"item-specific-answers",
+								"Jacket",
+								"materials"
+							]
+						},
+						"description": "Submit item-specific answer for Jacket materials"
+					},
+					"response": []
+				}
+			],
+			"description": "Endpoints for handling item-specific questions and answers"
+		},
+		{
+			"name": "Preferences & Recommendations",
+			"item": [
+				{
+					"name": "Get Current Preferences",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/preferences",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"preferences"
+							]
+						},
+						"description": "Get current user preferences"
+					},
+					"response": []
+				},
+				{
+					"name": "Set Complete Preferences",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"gender\": \"Men\",\n    \"item_types\": [\"Jacket\", \"Pants\", \"Sneakers\"],\n    \"style_vibes\": [\"Casual\", \"Preppy\"],\n    \"favorite_colors\": [\"Black\", \"Blue\", \"Gray\"],\n    \"preferred_materials\": [\"Cotton\", \"Denim\"],\n    \"key_occasions\": [\"Casual\", \"Office\"],\n    \"primary_seasons\": [\"Autumn\", \"Winter\"],\n    \"casual_outfit_style\": \"Casual\",\n    \"formal_outfit_color\": null,\n    \"specific_occasion\": \"Office\",\n    \"item_specific_preferences\": {\n        \"jacket\": {\n            \"colors\": [\"Black\", \"Blue\"],\n            \"materials\": [\"Cotton\"]\n        },\n        \"pants\": {\n            \"colors\": [\"Black\", \"Gray\"],\n            \"materials\": [\"Denim\"]\n        }\n    }\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/preferences",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"preferences"
+							]
+						},
+						"description": "Set complete user preferences"
+					},
+					"response": []
+				},
+				{
+					"name": "Get Recommendations",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/recommendations",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"recommendations"
+							]
+						},
+						"description": "Get fashion recommendations based on current preferences"
+					},
+					"response": []
+				},
+				{
+					"name": "Reset Session",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/reset",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"reset"
+							]
+						},
+						"description": "Reset the questionnaire session"
+					},
+					"response": []
+				}
+			],
+			"description": "Endpoints for managing user preferences and getting recommendations"
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "baseUrl",
+			"value": "http://localhost:8000",
+			"type": "string"
+		}
+	]
+}
